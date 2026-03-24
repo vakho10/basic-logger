@@ -44,7 +44,7 @@ public abstract class Logger {
         print(Level.ERROR, message, args);
     }
 
-    protected void print(@NotNull Level level, String message, @NotNull Object... args) {
+    protected synchronized void print(@NotNull Level level, String message, @NotNull Object... args) {
         if (message == null || message.isBlank()) {
             throw new IllegalArgumentException("Message cannot be null or blank");
         }
