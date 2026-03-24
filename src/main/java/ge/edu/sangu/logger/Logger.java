@@ -2,8 +2,6 @@ package ge.edu.sangu.logger;
 
 import org.jetbrains.annotations.NotNull;
 
-import java.util.Objects;
-
 public abstract class Logger {
 
     private final String name;
