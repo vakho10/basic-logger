@@ -48,9 +48,11 @@ public abstract class Logger {
         if (message == null || message.isBlank()) {
             throw new IllegalArgumentException("Message cannot be null or blank");
         }
-        writeToOutput(
-                String.format(formatter.format(name, level, message), args)
-        );
+        if (Configuration.DEFAULT_LEVEL.ordinal() <= level.ordinal()) {
+            writeToOutput(
+                    String.format(formatter.format(name, level, message), args)
+            );
+        }
     }
 
     protected abstract void writeToOutput(String output);
