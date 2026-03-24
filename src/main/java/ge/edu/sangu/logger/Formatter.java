@@ -5,7 +5,7 @@ import java.time.format.DateTimeFormatter;
 import java.util.regex.Pattern;
 
 public class Formatter {
-    public static final Formatter DEFAULT = new Formatter("[$d][$t][$l]: $m$n");
+    public static final Formatter DEFAULT = new Formatter("[$d][$t][$l][$name]: $m$n");
 
     private String format;
 
@@ -18,8 +18,8 @@ public class Formatter {
         if (output.contains("$t")) {
             output = output.replaceAll(Pattern.quote("$t"), Thread.currentThread().getName());
         }
-        if (output.contains("$l")) {
-            output = output.replaceAll(Pattern.quote("$l"), name);
+        if (output.contains("$name")) {
+            output = output.replaceAll(Pattern.quote("$name"), name);
         }
         if (output.contains("$n")) {
             output = output.replaceAll(Pattern.quote("$n"), "\n");
