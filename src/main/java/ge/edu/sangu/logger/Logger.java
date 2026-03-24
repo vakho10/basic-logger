@@ -47,7 +47,6 @@ public abstract class Logger {
     }
 
     protected void print(@NotNull Level level, String message, @NotNull Object... args) {
-//        Objects.requireNonNull(message, "Message cannot be null or blank");
         if (message == null || message.isBlank()) {
             throw new IllegalArgumentException("Message cannot be null or blank");
         }

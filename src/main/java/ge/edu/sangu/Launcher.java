@@ -24,10 +24,7 @@ public class Launcher {
             logger.info("Sum = %d", sum);
             logger.info("Application finished");
         } catch (Exception exception) {
-//            logger.error("Application failed", e);
             exception.printStackTrace(System.out);
-            return;
-//            System.exit(0);
         } finally {
             logger.info("Finally block executed");
         }
