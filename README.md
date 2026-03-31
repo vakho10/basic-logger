@@ -1,3 +1,3 @@
-# Basic Logger for Java Enthusiasts
+# Basic Logger (with Java)
 
 Basic logger library written in Java.
