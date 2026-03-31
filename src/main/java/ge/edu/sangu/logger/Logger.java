@@ -8,7 +8,7 @@ public abstract class Logger {
     private final Formatter formatter;
 
     public Logger(String name) {
-        this(name, Formatter.DEFAULT);
+        this(name, Configuration.getInstance().getFormatter());
     }
 
     public Logger(String name, Formatter formatter) {
@@ -48,7 +48,7 @@ public abstract class Logger {
         if (message == null || message.isBlank()) {
             throw new IllegalArgumentException("Message cannot be null or blank");
         }
-        if (Configuration.DEFAULT_LEVEL.ordinal() <= level.ordinal()) {
+        if (Configuration.getInstance().getLoggingLevel().ordinal() <= level.ordinal()) {
             writeToOutput(
                     String.format(formatter.format(name, level, message), args)
             );
