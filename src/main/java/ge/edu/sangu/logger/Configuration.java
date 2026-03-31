@@ -1,14 +1,7 @@
 package ge.edu.sangu.logger;
 
 public class Configuration {
-    private static Configuration INSTANCE;
-
-    public synchronized static Configuration getInstance() {
-        if (INSTANCE == null) {
-            INSTANCE = new Configuration();
-        }
-        return INSTANCE;
-    }
+    public static final Configuration configuration = new Configuration();
 
     private Level loggingLevel = Level.INFO;
     private Formatter formatter = Formatter.DEFAULT;
@@ -21,7 +14,7 @@ public class Configuration {
         this.formatter = formatter;
     }
 
-    public Level getLoggingLevel() {
+    public Level loggingLevel() {
         return loggingLevel;
     }
 
@@ -29,7 +22,7 @@ public class Configuration {
         this.loggingLevel = loggingLevel;
     }
 
-    public Formatter getFormatter() {
+    public Formatter formatter() {
         return formatter;
     }
 

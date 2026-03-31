@@ -2,13 +2,15 @@ package ge.edu.sangu.logger;
 
 import org.jetbrains.annotations.NotNull;
 
+import static ge.edu.sangu.logger.Configuration.configuration;
+
 public abstract class Logger {
 
     private final String name;
     private final Formatter formatter;
 
     public Logger(String name) {
-        this(name, Configuration.getInstance().getFormatter());
+        this(name, configuration.formatter());
     }
 
     public Logger(String name, Formatter formatter) {
@@ -48,7 +50,7 @@ public abstract class Logger {
         if (message == null || message.isBlank()) {
             throw new IllegalArgumentException("Message cannot be null or blank");
         }
-        if (Configuration.getInstance().getLoggingLevel().ordinal() <= level.ordinal()) {
+        if (configuration.loggingLevel().ordinal() <= level.ordinal()) {
             writeToOutput(
                     String.format(formatter.format(name, level, message), args)
             );
