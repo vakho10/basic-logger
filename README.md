@@ -1,3 +1,3 @@
-# Basic Logger
+# Basic Logger (with Java)
 
-Basic logger library writen in Java.
+Basic logger library writen mostly in Java.
