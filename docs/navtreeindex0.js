@@ -1,0 +1,22 @@
+var NAVTREEINDEX0 =
+{
+"annotated.html":[0,0],
+"classes.html":[0,1],
+"classge_1_1edu_1_1sangu_1_1_launcher.html":[0,0,0,0,0,1],
+"classge_1_1edu_1_1sangu_1_1logger_1_1_configuration.html":[0,0,0,0,0,0,0],
+"classge_1_1edu_1_1sangu_1_1logger_1_1_console_logger.html":[0,0,0,0,0,0,1],
+"classge_1_1edu_1_1sangu_1_1logger_1_1_console_logger.html#a0276a496694de9357bc2ede75e02401d":[0,0,0,0,0,0,1,0],
+"classge_1_1edu_1_1sangu_1_1logger_1_1_file_logger.html":[0,0,0,0,0,0,2],
+"classge_1_1edu_1_1sangu_1_1logger_1_1_file_logger.html#ab2b50e0462c188fc720a63d73b2027ab":[0,0,0,0,0,0,2,0],
+"classge_1_1edu_1_1sangu_1_1logger_1_1_formatter.html":[0,0,0,0,0,0,3],
+"classge_1_1edu_1_1sangu_1_1logger_1_1_formatter.html#a8c5c30c1b103a9efd59cc44b55abf630":[0,0,0,0,0,0,3,0],
+"classge_1_1edu_1_1sangu_1_1logger_1_1_logger.html":[0,0,0,0,0,0,5],
+"classge_1_1edu_1_1sangu_1_1logger_1_1_logger.html#a47327c557efb79c9899219eee8543fb2":[0,0,0,0,0,0,5,1],
+"classge_1_1edu_1_1sangu_1_1logger_1_1_logger.html#a681efde89aafa775930b2c682b712b4d":[0,0,0,0,0,0,5,0],
+"enumge_1_1edu_1_1sangu_1_1logger_1_1_level.html":[0,0,0,0,0,0,4],
+"functions.html":[0,3,0],
+"functions_func.html":[0,3,1],
+"hierarchy.html":[0,2],
+"index.html":[],
+"pages.html":[]
+};

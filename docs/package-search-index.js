@@ -1,1 +1,0 @@
-packageSearchIndex = [{"l":"All Packages","u":"allpackages-index.html"},{"l":"ge.edu.sangu"},{"l":"ge.edu.sangu.logger"}];updateSearchResults();
