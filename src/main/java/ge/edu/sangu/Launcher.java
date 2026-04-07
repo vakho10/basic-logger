@@ -8,7 +8,7 @@ import java.util.Random;
 public class Launcher {
     private static final Logger logger = new ConsoleLogger("Launcher");
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args) {
         try {
             logger.info("Application started");
             int sum = 0;
