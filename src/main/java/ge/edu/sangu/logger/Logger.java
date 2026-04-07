@@ -4,6 +4,13 @@ import org.jetbrains.annotations.NotNull;
 
 import static ge.edu.sangu.logger.Configuration.configuration;
 
+/**
+ * The Logger class serves as an abstract base for various types of loggers.
+ * It provides a framework for formatting and logging messages at different
+ * levels of severity and delegates the actual output mechanism to subclasses.
+ *
+ * @author v.laluashvili
+ */
 public abstract class Logger {
 
     private final String name;
@@ -46,7 +53,17 @@ public abstract class Logger {
         print(Level.ERROR, message, args);
     }
 
-    protected synchronized void print(@NotNull Level level, String message, @NotNull Object... args) {
+    /**
+     * Writes a formatted log message to the designated output if the provided logging
+     * level is equal to or greater than the configured logging level.
+     *
+     * @param level   the logging level for the message; determines whether the message will be logged
+     * @param message the log message to be formatted and printed; cannot be null or blank
+     * @param args    additional arguments to be substituted into the formatted log message
+     * @throws IllegalArgumentException if the provided message is null or blank
+     */
+    protected synchronized void print(@NotNull Level level, String message, @NotNull Object... args)
+            throws IllegalArgumentException {
         if (message == null || message.isBlank()) {
             throw new IllegalArgumentException("Message cannot be null or blank");
         }
@@ -57,5 +74,10 @@ public abstract class Logger {
         }
     }
 
+    /**
+     * Outputs a constructed log message into an arbitrary output stream.
+     *
+     * @param output output string
+     */
     protected abstract void writeToOutput(String output);
 }

@@ -1,9 +1,18 @@
 package ge.edu.sangu.logger;
 
+/**
+ * This is a centralized logger singleton configuration class.
+ *
+ * @author v.laluashvili
+ */
 public class Configuration {
     public static final Configuration configuration = new Configuration();
 
     private Level loggingLevel = Level.INFO;
+
+    /**
+     * Formatter object for formatting log lines.
+     */
     private Formatter formatter = Formatter.DEFAULT;
 
     public Configuration() {

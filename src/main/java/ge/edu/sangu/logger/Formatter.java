@@ -4,6 +4,14 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.regex.Pattern;
 
+/**
+ * Formatter is a utility class for constructing formatted log messages.
+ * This class allows users to specify a format string that defines the structure
+ * and content of log messages.
+ * <p>
+ * It provides functionality to replace
+ * placeholders in the format string with actual values during message formatting.
+ */
 public class Formatter {
     public static final Formatter DEFAULT = new Formatter("[$date][$threadName][$loggingLevel][$name]: $m$n");
 
@@ -13,6 +21,14 @@ public class Formatter {
         this.format = format;
     }
 
+    /**
+     * Formats and return a log message
+     *
+     * @param name    logger name
+     * @param level   logging level
+     * @param message log message
+     * @return formatted log message
+     */
     public String format(String name, Level level, String message) {
         String output = format;
         if (output.contains("$threadName")) {
